@@ -1,2 +1,0 @@
-# ngDevs
-Angular Developer
