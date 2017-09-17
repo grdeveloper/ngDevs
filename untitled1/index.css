@@ -1,0 +1,496 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*{
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    height: 500px;
+    background: url("images/background.jpg") no-repeat center top;
+    background-size: cover;
+}
+
+#logo{
+    width: 85px;
+    height: 70px;
+    margin-left: 45px;
+    margin-top: 12px;
+    float: left;
+}
+
+#logo img, #footerLogo img{
+    width: 85px;
+    height: 72px;
+}
+
+nav{
+    float: right;
+    margin-top: 28px;
+}
+
+nav a{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(0, 0, 0 , .5);
+    font-size: 20px;
+    margin-right: 35px;
+    display: inline-block;
+}
+
+nav a:hover{
+    color: rgba(0, 150, 250 , 1);
+}
+
+#heading{
+    clear: both;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 70px;
+}
+
+#heading span{
+    border: 15px solid white;
+    margin-top: 100px;
+    padding: 20px 25px 20px 45px;
+}
+
+#heading h1{
+    text-transform: none;
+    font-size: 90px;
+    letter-spacing: 45px;
+}
+
+#heading p{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+footer{
+    width: 100%;
+    min-height: 210px;
+    background: url("images/background.jpg")center top 10%;
+    background-size: cover;
+}
+
+footer #footerLogo{
+    float: left;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+footer #footerLogo img{
+    width: 120px;
+    height: 100px;
+}
+
+#footerNav{
+    float: left;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+footer p{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+    color: rgba(0, 0, 0 , .4);
+}
+
+section h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: burlywood;
+    padding-top: 80px;
+    letter-spacing: 3px;
+}
+
+.photos{
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photos img:first-child{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    order: 2;
+}
+
+.photos img:nth-child(4){
+    order: 3;
+}
+
+.photos img:nth-child(5){
+    order: 3;
+}
+
+.photos img{
+    width: 100px;
+    height: 100px;
+}
+
+.text{
+    max-width: 850px;
+    margin: 70px auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+.skills{
+    max-width: 800px;
+    margin: 120px auto;
+    color: darkgrey;
+}
+
+.skills label{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.skills .commInfo div{
+    width: 300px;
+    height: 5px;
+    background: gainsboro;
+}
+
+.skills div span{
+    height: 5px;
+    position: absolute;
+    background: slategray;
+}
+
+.skills .commun{
+    width: 250px;
+}
+
+.skills .learn{
+    width: 270px;
+}
+
+.skills .plan{
+    width: 240px;
+}
+.skills .ux{
+    width: 290px;
+}
+.skills .org{
+    width: 230px;
+}
+.skills .teach{
+    width: 265px;
+}
+.skills .visual{
+    width: 275px;
+}
+.skills .prog{
+    width: 285px;
+}
+
+.skills .commInfo {
+    display: inline-block;
+    margin: 0 40px 30px;
+}
+
+section.work, section.social{
+    background: #f2f3f4;
+}
+
+.workContainer{
+    max-width: 90%;
+    margin: 100px 5% 0;
+    padding-bottom: 70px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.mainFolder{
+    width: 25%;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.mainFolder:hover .imgFolder{
+    transform: translateY(-50.1%);
+}
+
+.workContainer img{
+    width: 300px;
+    height: 200px;
+}
+
+.imgFolder{
+    width: 100%;
+    height: 400px;
+    background: url("images/searchicon.png") no-repeat center bottom 30px, #dee8f7;
+    background-size: 50px;
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    transition: transform .17s ease-in-out;
+}
+
+.imgFolder h4{
+    text-align: center;
+    line-height: 100px;
+}
+
+.regForm{
+    max-width: 800px;
+    margin: 50px auto 70px;
+}
+
+input, textarea{
+    border: 3px solid burlywood;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+}
+
+input:focus, textarea:focus{
+    border-color: saddlebrown;
+}
+
+input[type="submit"]{
+    font-size: 23px;
+    text-transform: uppercase;
+    color: white;
+    background: burlywood;
+    padding: 10px 23px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+input[type="submit"]:hover{
+    background: saddlebrown;
+}
+
+.regForm span{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.regForm label{
+    width: 100%;
+    margin-bottom: 23px;
+    display: block;
+}
+
+.regForm label:nth-child(1), label:nth-child(2){
+    display: inline-block;
+    width: 48% !important;
+}
+
+.regForm label:nth-child(2){
+    float: right;
+}
+
+.regForm label:nth-child(4){
+    width: 25%;
+    transform: translateX(300%);
+}
+
+.regForm textarea{
+    resize: none;
+    overflow-y: hidden;
+    height: 280px;
+}
+
+hr{
+    width: 18%;
+    height: 0;
+    border-top: 3px solid burlywood;
+}
+
+.social p{
+    font-size: 5vw;
+    text-align: center;
+    padding-bottom: 70px;
+    color: burlywood;
+    cursor: pointer;
+    transition: color .5s ease;
+}
+
+.social p:hover{
+    color: saddlebrown;
+}
+
+.socImgContainer{
+    max-width: 750px;
+    margin: 70px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.socImgContainer img{
+    width: 120px;
+    height: 120px;
+    transition: transform .3s ease-in-out;
+}
+
+.socImgContainer a{
+    position: relative;
+}
+
+@keyframes spin {
+    from{
+        border: 0;
+        opacity: 1;
+    }
+    to{
+        border: 5px solid burlywood;
+        transform: scale(1.5);
+        opacity: .1;
+    }
+}
+
+.socImgContainer a span{
+    width: 110px;
+    height: 110px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.socImgContainer a:hover span{
+    animation: spin .5s ease-in-out;
+}
+
+#parallax{
+    width: 100%;
+    height: 400px;
+    margin: 5% 0;
+}
+
+
+
+@media screen and (max-width: 800px){
+    header #logo{
+        float: none;
+        margin: 0 auto;
+    }
+    header nav{
+        float: none;
+        text-align: center;
+    }
+    header #heading{
+        padding-top: 50px;
+    }
+    header #heading h1{
+        font-size: 70px;
+    }
+    footer #footerLogo{
+        margin-left: 0;
+    }
+    .skills{
+        max-width: 300px;
+        margin: 50px auto;
+    }
+    .skills .commInfo {
+        display: block;
+        margin: 25px 0;
+    }
+}
+
+@media screen and (max-width: 685px){
+    .mainFolder{
+        width: 50%;
+    }
+    footer{
+        background: url("images/background.jpg")center;
+        background-size: cover;
+    }
+    footer #footerLogo{
+        margin: 3px;
+        float: none;
+        display: block;
+    }
+    footer #footerLogo img{
+        width: 80px;
+        height: 70px;
+    }
+    footer #footerNav {
+        margin-left: 3px;
+        margin-top: 0;
+        float: right;
+        display: block;
+    }
+    footer #footerNav a{
+        font-size: 15px;
+    }
+    footer p {
+        line-height: normal;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 617px){
+    header #heading h1{
+        font-size: 30px;
+        margin-bottom: 80px;
+    }
+    #heading span{
+        border: 8px solid white;
+        margin-top: 150px;
+        padding: 10px 12px 10px 23px;
+    }
+    .photos img:first-child{
+        order: 0;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .imgFolder{
+        font-size: 15px;
+    }
+    .regForm label:nth-child(1), label:nth-child(2){
+        display: inline-block;
+        width: 100% !important;
+    }
+    .regForm label:nth-child(4){
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 352px){
+    .mainFolder{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 405px){
+    header #heading h1{
+        font-size: 18px;
+        margin-top: 50px;
+        letter-spacing: 11px;
+    }
+    #heading span{
+        border: 3px solid white;
+        margin-top: 150px;
+        padding: 15px 5px 15px 7px;
+    }
+    header #heading p{
+        font-size: 15px;
+    }
+}
