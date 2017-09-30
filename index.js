@@ -14,7 +14,11 @@ for(var i = 0; i < anchorTag.length; i++){
         }catch (x){
             e.returnValue = false;
         }
-         sect[id].scrollIntoView({block: "start", behavior: "smooth"});
+        try{
+            sect[id].scrollIntoView({block: "start", behavior: "smooth"});
+        }catch(err){
+            window.scrollTo({"left": "0", "top" : sect[id].offsetTop, "behavior" : "smooth"});
+        }
     });
 }
 
