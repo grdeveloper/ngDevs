@@ -4,6 +4,20 @@ function parallax() {
     headSection.style.backgroundPosition = "center " + -(window.pageYOffset/5) + "px";
 }
 
+var sect = document.querySelectorAll("section");
+var anchorTag = document.querySelectorAll("header nav a");
+for(var i = 0; i < anchorTag.length; i++){
+    anchorTag[i].addEventListener("click", function (e) {
+        var id = e.target.getAttribute("href");
+        try{
+            e.preventDefault();
+        }catch (x){
+            e.returnValue = false;
+        }
+         sect[id].scrollIntoView({block: "start", behavior: "smooth"});
+    });
+}
+
 var d = document.getElementById("parallax");
 
 var options = {
