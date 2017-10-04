@@ -53,6 +53,7 @@ function error(err) {
 }
 
 params = {
+    enableHighAccuracy: true,
     timeout: 10000
 };
 
