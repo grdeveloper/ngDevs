@@ -54,7 +54,8 @@ function error(err) {
 
 params = {
     enableHighAccuracy: true,
-    timeout: 10000
+    timeout: 10000,
+    maximumAge: 5
 };
 
 navigator
