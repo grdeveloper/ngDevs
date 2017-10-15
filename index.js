@@ -22,6 +22,20 @@ for(var i = 0; i < anchorTag.length; i++){
     });
 }
 
+function scrumb() {
+    var foot = document.querySelector('.foot').offsetTop;
+    if(window.pageYOffset >0){
+        scr.style.opacity = "1";
+        scr.onclick = function () {
+            window.scrollTo({"left": "0", "top" : "0", "behavior" : "smooth"});
+        };
+    }else{
+        scr.style.opacity = "0";
+    }
+}
+
+window.addEventListener('scroll', scrumb);
+
 var d = document.getElementById("parallax");
 
 function initMap() {
