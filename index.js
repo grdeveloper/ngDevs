@@ -24,6 +24,14 @@ for(var i = 0; i < anchorTag.length; i++){
 
 var d = document.getElementById("parallax");
 
+function initMap() {
+    var options = {
+        zoom: 8,
+        center: {lat: 42.3601, lng: -71.0589}
+    };
+    var map = new google.maps.Map(d, options);
+}
+
 var options = {
     zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -42,14 +50,7 @@ function success(position) {
 }
 
 function error(err) {
-    var s = "";
-    switch(err){
-        case 1: s = "No permission";break;
-        case 2: s = "Technical error";break;
-        case 3: s = "Timeout";break;
-        default: s = "Unknown error";
-    }
-    d.innerHTML = s;
+        initMap();
 }
 
 params = {
