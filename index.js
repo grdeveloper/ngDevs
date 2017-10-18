@@ -43,7 +43,7 @@ var d = document.getElementById("parallax");
 function initMap() {
     var options = {
         zoom: 8,
-        center: {lat: 40.151864, lng: 44.483192}
+        center: {lat: 40.151986, lng: 44.483105}
     };
     var map = new google.maps.Map(d, options);
 }
