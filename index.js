@@ -38,10 +38,22 @@ scr.addEventListener('click', function () {
     try{
         window.scrollTo({"left": "0", "top" : "0", "behavior" : "smooth"});
     }catch(x){
-        window.scrollTo( 0, 0 );
+        var scrolled = window.pageYOffset, timer;
+        scrollToTop();
     }
     
 });
+
+function scrollToTop() {
+    if(scrolled > 0){
+         window.scrollTo(0, scrolled);
+         scrolled = scrolled - 25;
+         timer = setTimeout(scrollToTop, 5);
+    }else{
+         clearTimeout(timer);
+         window.scrollTo(0,0);
+    }
+}
 
 var d = document.getElementById("parallax");
 
