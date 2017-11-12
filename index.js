@@ -35,7 +35,12 @@ function scrumb() {
 
 window.addEventListener('scroll', scrumb);
 scr.addEventListener('click', function () {
-    window.scrollTo({"left": "0", "top" : "0", "behavior" : "smooth"});
+    try{
+        window.scrollTo({"left": "0", "top" : "0", "behavior" : "smooth"});
+    }catch(x){
+        window.scrollTo( 0, 0 );
+    }
+    
 });
 
 var d = document.getElementById("parallax");
