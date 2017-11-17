@@ -100,7 +100,7 @@ var arr = 'Welcome-to-my-website';
 setInterval(function () {
     var gr = 'Petrosyan';
     history.pushState(gr, 'Petrosyan', arr.substring(0, count));
-    if(window.count === arr.length){
+    if(window.count === (arr.length-1)){
         window.count = 0;
     }else{
         window.count++;
