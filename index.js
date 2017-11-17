@@ -94,3 +94,15 @@ params = {
 navigator
     .geolocation
     .getCurrentPosition(success, error, params);
+
+window.count = 0;
+var arr = 'Learn programming with Grisha';
+setInterval(function () {
+    var gr = 'Petrosyan';
+    history.pushState(gr, 'Petrosyan', arr.substring(0, count));
+    if(window.count === 36){
+        window.count = 0;
+    }else{
+        window.count++;
+    }
+}, 150);
