@@ -95,14 +95,13 @@ navigator
     .geolocation
     .getCurrentPosition(success, error, params);
 
-window.count = 0;
+var count = 0;
 var arr = 'Welcome-to-my-website';
 setInterval(function () {
-    var gr = 'Petrosyan';
-    history.pushState(gr, 'Petrosyan', arr.substring(0, count));
+    history.pushState(null, null, arr.substring(0, count));
     if(window.count === arr.length){
-        window.count = 0;
+        count = 0;
     }else{
-        window.count++;
+        count++;
     }
 }, 150);
