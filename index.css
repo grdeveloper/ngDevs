@@ -241,6 +241,7 @@ section.work, section.social{
     color: white;
     font-weight: bold;
     transition: transform .17s ease-in-out;
+    display: block;
 }
 
 .imgFolder h4{
@@ -402,7 +403,50 @@ hr{
     transform: translate(-50%, -50%);
 }
 
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
 
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
 
 @media screen and (max-width: 800px){
     header #logo{
@@ -492,7 +536,7 @@ hr{
     }
 }
 
-@media screen and (max-width: 352px){
+@media screen and (max-width: 400px){
     .mainFolder{
         width: 100%;
     }
