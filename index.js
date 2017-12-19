@@ -70,18 +70,16 @@ var options = {
     mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 
-var marker = new google.maps.Marker();
-
 var map = new google.maps.Map(d, options);
 
 function success(position) {
     var loc = new google.maps.LatLng(position.coords.latitude,
         position.coords.longitude);
     map.setCenter(loc);
-    //var label = new google.maps.InfoWindow();
-    //label.setContent("You are here!");
-    marker.setPosition(loc);
-    marker.open(map);
+    var label = new google.maps.InfoWindow();
+    label.setContent("You are here!");
+    label.setPosition(loc);
+    label.open(map);
 }
 
 function error(err) {
