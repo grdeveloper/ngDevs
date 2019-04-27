@@ -89,7 +89,7 @@
             initMap();
     }
 
-    params = {
+    var params = {
         enableHighAccuracy: true,
         timeout: 10000
     };
